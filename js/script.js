@@ -160,14 +160,14 @@ window.addEventListener('DOMContentLoaded', function () {
             console.log(btn);
         btn.forEach ( function(item){ // перебираем все элементы этого класса
 
-            item.addEventListener('click', function () {
+            item.addEventListener('click', function () { // ставим обработчик на каждый элемент
                 mdBlock.style.display = 'block';
                 this.classList.add('more-splash');
                 document.body.style.overflow = 'hidden';
             })
 
         })
-                closeModal.addEventListener('click', function () {
+                closeModal.addEventListener('click', function () { // обработчик на закрывающий блок он всегда один в данный момент
                 mdBlock.style.display = 'none';
                 this.classList.remove('more-splash');
                 document.body.style.overflow = '';
@@ -175,8 +175,8 @@ window.addEventListener('DOMContentLoaded', function () {
         
         
     }
-    modal('.more', '.overlay', '.popup-close');
-    modal('.description-btn', '.overlay', '.popup-close');
+    modal('.more', '.overlay', '.popup-close'); //вызываем функцию для кнопок с классом more
+    modal('.description-btn', '.overlay', '.popup-close'); //вызываем функцию для кнопок с классом description-btn
     
   
 
